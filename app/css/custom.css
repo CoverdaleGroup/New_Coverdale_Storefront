@@ -1,6 +1,33 @@
 /*
 Static file for Theme changes
-Theme name: My SPA Theme
+Theme name: Base Coverdale Theme
+Published: 12/20/2017
 Version: 1.0
 Template: Howdy
 */
+
+body {
+	
+	background-color: #fff;
+}
+
+.panel {
+	
+	border: 3px solid #ececec;
+	
+}
+
+.panel-product-list.no-panels .well {
+	border: 3px solid #ececec;
+	
+}
+
+.panel-product-list .well {
+	
+	height: 300px;
+}
+
+.thumbnail img {
+	
+	max-height: 125px;
+}
