@@ -1,4 +1,5 @@
 <section>
+<!--
     <nav id="451qa_nav_hdr" class="nav">
         <ul>
             <li class="hidden-sm hidden-xs">
@@ -14,7 +15,9 @@
             </li>
         </ul>
     </nav>
+-->
     <div class="row">
+		<!--
         <aside class="col-md-3 visible-md visible-lg" ng-if="navStatus.visible">
             <div class="panel panel-default panel-nav">
                 <div class="panel-heading">
@@ -29,7 +32,11 @@
                 </nav>
             </div>
         </aside>
-        <div ng-class="{ 'col-md-9': navStatus.visible, 'col-md-12': !navStatus.visible }" >
+		-->
+		<!--
+		<div ng-class="{ 'col-md-9': navStatus.visible, 'col-md-12': !navStatus.visible }" >
+		-->
+        <div class="col-collapse" ng-class="{ 'col-md-9': navStatus.visible }" >
 
             <categorylistview></categorylistview>
 

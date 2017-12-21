@@ -1,10 +1,15 @@
 <div class="login">
+    <!--
     <div class="order-cloud-image" style="background: url('css/images/orderCloud.jpg') center center fixed;"></div>
+	-->
     <section class="order-cloud">
         <div id="login_box">
             <div id="login_form" class="animated bounceIn">
                 <form class="form-signin" ng-submit="login()" name="login_form">
+					<!--
                     <h2 class="animated fadeIn text-center">{{'Testing' | r}}</h2>
+					-->
+					<img src="css/images/Coverdale_Group_Logo_Color_Small.png" style="max-width: 200px; margin: auto;"/>
                     <p id="451qa_msg_login" ng-show="loginMessage" ng-bind-html="loginMessage" class="alert alert-info"></p>
                     <div>
                         <div class="view-form-icon" ng-show="!showEmailHelp && !PasswordReset && (loginMessage != 'Your password has expired and will need to be changed.')">
@@ -59,6 +64,9 @@
                             <btn class="btn btn-info btn-block" ng-show="showEmailHelp" ng-click="showEmailHelp = !showEmailHelp; buttonText = 'Logon'">
                                 Return to logon
                             </btn>
+							<p style="text-align: center;">
+                                <a href="#" style="color: #ffffff; text-decoration: none; padding-top: 10px;">Click here to request a username</a>
+                            </p>
                         </div>
                         <div>
                             <div class="view-form-icon" ng-show="PasswordSecurityException">
