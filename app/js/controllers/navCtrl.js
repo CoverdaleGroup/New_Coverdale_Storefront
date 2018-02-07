@@ -1,5 +1,5 @@
-four51.app.controller('NavCtrl', ['$location', '$route', '$scope', '$451', 'User',
-    function ($location, $route, $scope, $451, User) {
+four51.app.controller('NavCtrl', ['$location', '$route', '$scope', '$451', 'User', '$window',
+    function ($location, $route, $scope, $451, User, $window) {
         $scope.Logout = function(){
             User.logout();
             if ($scope.isAnon) {
@@ -47,5 +47,17 @@ four51.app.controller('NavCtrl', ['$location', '$route', '$scope', '$451', 'User
 
         $scope.$on('event:orderUpdate', function(event, order) {
             $scope.cartCount = (order ? ((order.Status == 'Unsubmitted') ? order.LineItems.length : null) : null);
+        });
+
+        // Watch height of image to set category element height for vertical-center class
+        $scope.$watch(function() {
+            return document.getElementById("logo-categories-container").offsetHeight;
+        }, function(){
+            $scope.calcHeight = {'height': document.getElementById("logo-categories-container").offsetHeight + 5};
+        });
+
+        // Watch window size to set category element height for vertical-center class on change
+        angular.element($window).on('resize', function () {
+            $scope.calcHeight = {'height': document.getElementById("logo-categories-container").offsetHeight + 5};
         });
     }]);
