@@ -103,6 +103,10 @@ Authors: Coverdale Group
     width: 100%;
 }
 
+.dropdown-menu {
+    z-index:10000;
+}
+
 .header-navigation .pull-right .dropdown-menu {
     left: auto;
     right: 0;
@@ -390,6 +394,19 @@ input, button, select, textarea {
     margin-left: -1px;
 }
 
+.dropdown-submenu>a:before {
+    display: inline-block;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 5px 5px 5px;
+    border-right-color: #ccc;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
 .dropdown-submenu:hover > .dropdown-menu {
     display: block;
 }
@@ -428,6 +445,10 @@ input, button, select, textarea {
     height: auto;
 }
 
+.panel-search .well {
+    height:auto;
+}
+
 /*
 .panel-category-list ul li .well {
 
@@ -441,6 +462,10 @@ input, button, select, textarea {
 .navbar-fixed-bottom {
     position: relative;
     margin-bottom: 15px;
+}
+
+.product-detail-default .navbar-fixed-bottom {
+    position:fixed;
 }
 
 .thumbnail img {
